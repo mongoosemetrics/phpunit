@@ -190,7 +190,7 @@ class PHPUnit_Util_GlobalState
     public static function getIncludedFilesAsString()
     {
         $blacklist = self::phpunitFiles();
-        $files     = get_included_files();
+        $files     = array();
         $prefix    = FALSE;
         $result    = '';
         $script    = realpath($GLOBALS['_SERVER']['SCRIPT_NAME']);
